@@ -6,12 +6,12 @@ plugins {
 
 android {
     namespace = "com.example.aplicacionxd"
-    compileSdk = 34
+    compileSdk = 35
 
     defaultConfig {
         applicationId = "com.example.aplicacionxd"
         minSdk = 23
-        targetSdk = 34
+        targetSdk = 35
         versionCode = 1
         versionName = "1.0"
 
@@ -58,6 +58,8 @@ dependencies {
     implementation("androidx.compose.material3:material3")
     implementation("androidx.activity:activity-compose:1.9.3")
     implementation("androidx.lifecycle:lifecycle-runtime-ktx:2.8.6")
+    implementation("androidx.navigation:navigation-compose:2.8.2")
+
 
     // Firebase
     implementation(platform("com.google.firebase:firebase-bom:33.5.1"))
@@ -67,6 +69,9 @@ dependencies {
     // AppCompat (para las Activities tradicionales)
     implementation("androidx.appcompat:appcompat:1.7.0")
     implementation("com.google.android.material:material:1.12.0")
+    implementation(libs.androidx.credentials)
+    implementation(libs.androidx.credentials.play.services.auth)
+    implementation(libs.googleid)
 
     // Tests
     testImplementation("junit:junit:4.13.2")
